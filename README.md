@@ -1,12 +1,14 @@
 # Portmaster band72 Build
 
-Unofficial Windows build of the open-source [Portmaster](https://github.com/safing/portmaster) application firewall, with extra tools for seeing what your programs do.
+Unofficial Windows and Linux build of the open-source [Portmaster](https://github.com/safing/portmaster) application firewall, with extra tools for seeing what your programs do.
 
 > **Not made or supported by Safing.** This is a modified version made by band72. For the official Portmaster, go to [safing.io/download](https://safing.io/download/).
 
 ## Download
 
-**[⬇ Download for Windows (64-bit)](https://github.com/band72/portmaster-releases/releases/latest/download/Portmaster-band72-windows-x64-setup.exe)**
+- **[⬇ Windows (64-bit installer)](https://github.com/band72/portmaster-releases/releases/latest/download/Portmaster-band72-windows-x64-setup.exe)**
+- **[⬇ Linux .deb (Debian, Ubuntu, Mint)](https://github.com/band72/portmaster-releases/releases/latest/download/Portmaster-band72-linux-amd64.deb)** · `sudo apt install ./Portmaster-band72-linux-amd64.deb`
+- **[⬇ Linux .rpm (Fedora, openSUSE, RHEL)](https://github.com/band72/portmaster-releases/releases/latest/download/Portmaster-band72-linux-x86_64.rpm)** · `sudo dnf install ./Portmaster-band72-linux-x86_64.rpm`
 
 Download page: https://band72.github.io/portmaster-releases/ · [All releases](https://github.com/band72/portmaster-releases/releases)
 
@@ -15,6 +17,8 @@ The installer is not code-signed, so Windows SmartScreen shows "Windows protecte
 ```powershell
 Get-FileHash .\Portmaster-band72-windows-x64-setup.exe
 ```
+
+On Linux, check with `sha256sum Portmaster-band72-linux-*`, install the package, then restart the computer.
 
 ## What this build adds
 
