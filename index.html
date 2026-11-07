@@ -189,6 +189,17 @@
   <p>Automatic software updates are off in this build, because Portmaster's updates come from Safing's official channel and would replace this build with the official version. Come back to this page for new versions. Filter lists and other intelligence data still update automatically.</p>
   <p>Do not use <em>Check for updates</em> in the Portmaster settings: it installs the official version. If you installed over an official Portmaster where you had turned automatic updates on yourself, turn them off under Settings › Updates.</p>
 
+  <h2>The new features don't show up</h2>
+  <p>If Portmaster looks like the official version after installing, the old version is usually still running. Try these in order:</p>
+  <ol>
+    <li><strong>Restart the computer.</strong> The installer stops the old Portmaster service but doesn't start the new one, and the old window, tray icon or network driver can keep running until you restart. Then open Portmaster from the Start menu.</li>
+    <li><strong>Check that the installer finished.</strong> If it showed “service could not be stopped” or “service creation failed”, the old files were left in place. Restart, then run the installer again.</li>
+    <li><strong>Don't use <em>Check for updates</em> or <em>Upgrade</em></strong> in the Portmaster settings. They install the official version over this build. If you did, download this build again and reinstall it.</li>
+  </ol>
+  <p>To check which build is installed, run this in PowerShell as administrator. <code>True</code> means this build is installed; <code>False</code> means it isn't, so restart and run the installer again.</p>
+  <pre>Select-String -Path "C:\Program Files\Portmaster\portmaster-core.exe" -Pattern "band72" -Quiet</pre>
+  <p>On Linux: <code>grep -c band72 /usr/lib/portmaster/portmaster-core</code> prints a number above 0 for this build. Restart after installing there too.</p>
+
   <footer>
     Portmaster is free software under the GNU General Public License v3.0. The complete source code of each build is attached to its release.
     “Portmaster” is a project of Safing; this site is not affiliated with Safing.

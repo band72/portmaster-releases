@@ -34,6 +34,22 @@ Automatic software updates are off in this build, because Portmaster's updates c
 
 Do not use *Check for updates* in the Portmaster settings: it installs the official version. If you installed over an official Portmaster where you had turned automatic updates on yourself, turn them off under Settings › Updates.
 
+## The new features don't show up
+
+If Portmaster looks like the official version after installing, the old version is usually still running. Try these in order:
+
+1. **Restart the computer.** The installer stops the old Portmaster service but doesn't start the new one, and the old window, tray icon or network driver can keep running until you restart. Then open Portmaster from the Start menu.
+2. **Check that the installer finished.** If it showed "service could not be stopped" or "service creation failed", the old files were left in place. Restart, then run the installer again.
+3. **Don't use *Check for updates* or *Upgrade*** in the Portmaster settings. They install the official version over this build. If you did, download this build again and reinstall it.
+
+To check which build is installed, run this in PowerShell as administrator. `True` means this build is installed; `False` means it isn't, so restart and run the installer again.
+
+```powershell
+Select-String -Path "C:\Program Files\Portmaster\portmaster-core.exe" -Pattern "band72" -Quiet
+```
+
+On Linux, `grep -c band72 /usr/lib/portmaster/portmaster-core` prints a number above 0 for this build. Restart after installing there too.
+
 ## Source code and license
 
 Portmaster is free software under the [GNU General Public License v3.0](LICENSE). Every release includes `portmaster-<version>-source.zip`, the complete source code of exactly that build.
