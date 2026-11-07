@@ -24,7 +24,11 @@ Get-FileHash .\Portmaster-band72-windows-x64-setup.exe
 - **Firewall Profiles**: apply a ready-made set of firewall settings, preview the changes first, and undo them later.
 - **Quick block buttons**: block all internet or local network connections with one click.
 
-Portmaster updates itself automatically. Updates come from Safing's official channel, so they can replace this build with the official version.
+## Updates
+
+Automatic software updates are off in this build, because Portmaster's updates come from Safing's official channel and would replace this build with the official version. Get new versions from the [download page](https://band72.github.io/portmaster-releases/). Filter lists and other intelligence data still update automatically.
+
+Do not use *Check for updates* in the Portmaster settings: it installs the official version. If you installed over an official Portmaster where you had turned automatic updates on yourself, turn them off under Settings › Updates.
 
 ## Source code and license
 
