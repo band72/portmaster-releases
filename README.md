@@ -25,6 +25,7 @@ On Linux, check with `sha256sum Portmaster-band72-linux-*`, install the package,
 - **System Monitor**: total and per-process CPU, memory, user and Windows service, plus temperatures where the computer reports them.
 - **Process Intelligence Report**: for any running program, its digital signature, privileges, open sensitive files, camera and microphone use, injected code, network destinations and listening ports, with a risk rating.
 - **Force block per app**: block or unblock internet access for a program straight from its report.
+- **Security Monitor**: watches in the background for port scans, password guessing on remote access services, programs contacting known malware servers, newly opened ports and programs with strong signs of spying, then alerts you and keeps a 30-day history. Block an attacking address with one click.
 - **Firewall Profiles**: apply a ready-made set of firewall settings, preview the changes first, and undo them later.
 - **Quick block buttons**: block all internet or local network connections with one click.
 
